@@ -33,7 +33,7 @@ class Ship
     @draft=draft
     @crew=crew
   end
-  def is_worth_it
+  def worth_it?
     @draft - (@crew * 1.5) > 20
   end
 end

@@ -14,13 +14,13 @@ describe 'between' do
       expect(between_result_equal_arguments).to eq([4])
     end
 
-    it 'If 1st > 2nd' do
+    it 'If 1st > 2nd must return a array empty' do
       expect(between(4,1)).to eq([])
     end
   end
 
   context 'When args arent integers' do
-    it 'If args are strings' do
+    it 'If args are strings must return a array of strings with values between the arguments' do
       between_result_string_arguments = between("1", "4")
       expect(between_result_string_arguments).to eq(["1", "2", "3", "4"])
     end

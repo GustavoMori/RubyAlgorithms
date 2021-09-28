@@ -3,7 +3,7 @@ require_relative '../exercises/exercise_5'
 describe Ball do
   context 'When initialize create type and edit type' do
     it 'return "regular" as default to attribute type' do 
-      ball = Ball.new()
+      ball = Ball.new
       expect(ball.type).to eq("regular")
     end
 
@@ -13,7 +13,7 @@ describe Ball do
     end
 
     it 'return type of ball' do
-      ball = Ball.new()
+      ball = Ball.new
       expect(ball.ball_type).to eq("regular")
     end
 

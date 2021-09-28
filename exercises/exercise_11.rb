@@ -17,11 +17,3 @@ class Person
     "Hello #{your_name}, my name is #{@name}"
   end
 end
-
-jack = Person.new("Jack")
-jill = Person.new("Jill")
-
-puts jack.greet("Jill")
-puts jack.greet("Mary")
-puts jill.greet("Jack")
-puts jill.name

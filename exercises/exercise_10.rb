@@ -5,9 +5,13 @@ def log qualquer
   puts 'terminei'
 end
 
-log 1 do |t|
-  puts t
-end
+# log 1 do |t|
+#   puts t
+# end
 
 
-log (1) { |t| puts t }
+# log (1) { |t| puts t }
+
+# puts log(1)
+
+# log(1)

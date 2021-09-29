@@ -15,11 +15,13 @@ describe Dessert do
     end
 
     it 'set a new value of name' do
-      expect(dessert.name = 'Cookie de red velvet').to eq('Cookie de red velvet')
+      dessert.name = 'Cookie de red velvet'
+      expect(dessert.name).to eq('Cookie de red velvet')
     end
 
     it 'set a new value of calories' do
-      expect(dessert.calories = 501).to eq(501)
+      dessert.calories = 501
+      expect(dessert.calories).to eq(501)
     end
   end
 
@@ -27,6 +29,11 @@ describe Dessert do
     
     it 'return true if calories < 200' do
       expect(dessert).not_to be_healthy
+    end
+
+    it 'return false if calories > 200' do
+      dessert.calories = 199
+      expect(dessert).to be_healthy
     end
 
     it 'return true' do
@@ -54,15 +61,18 @@ describe JellyBean do
     end
 
     it 'set a new value of name' do
-      expect(jelly_bean.name = 'Fini').to eq('Fini')
+      jelly_bean.name = 'Fini'
+      expect(jelly_bean.name).to eq('Fini')
     end
 
     it 'set a new value of calories' do
-      expect(jelly_bean.calories = 95).to eq(95)
+      jelly_bean.calories = 95
+      expect(jelly_bean.calories).to eq(95)
     end
 
     it 'set a new value of flavor' do
-      expect(jelly_bean.flavor = 'strawberry').to eq('strawberry')
+      jelly_bean.flavor = 'strawberry'
+      expect(jelly_bean.flavor).to eq('strawberry')
     end
   end
 

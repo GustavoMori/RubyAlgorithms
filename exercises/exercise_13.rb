@@ -60,9 +60,3 @@ class Block
     2 * (@width * @length + @length * @height + @width * @height)
   end
 end
-
-block1 = Block.new([2,4,5])
-puts block1.width
-puts block1.length
-puts block1.height
-

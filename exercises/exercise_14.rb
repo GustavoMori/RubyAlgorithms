@@ -52,5 +52,5 @@ end
 # puts 'healthy ' "#{dessert2.healthy?}"
 # puts "delicious #{dessert2.delicious?}"
 
-dessert3 = JellyBean.new('Cafezinh', 202, 'black milk')
-puts "delicious #{dessert3.delicious?}"
+# dessert3 = JellyBean.new('Cafezinh', 202, 'black milk')
+# puts "delicious #{dessert3.delicious?}"

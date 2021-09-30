@@ -76,13 +76,13 @@ class Refrigerator
   end
 end
 
-geladeira = Refrigerator.new()
-geladeira.open!
-begin
-  geladeira.see_inside!
-rescue Refrigerator::MustBeOpenedError
-  puts 'You forget to open the refrigerator, noob'
-end
+# geladeira = Refrigerator.new()
+# geladeira.open!
+# begin
+#   geladeira.see_inside!
+# rescue Refrigerator::MustBeOpenedError
+#   puts 'You forget to open the refrigerator, noob'
+# end
 
 
 # puts geladeira.open_put_close(3, 'café', 'cafézinho', 'bala de café')

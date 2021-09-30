@@ -11,6 +11,6 @@ end
 # end
 
 
-lazy do
-  puts 2+2
-end
+# lazy do
+#   puts 2+2
+# end

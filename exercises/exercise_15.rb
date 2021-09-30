@@ -33,7 +33,7 @@ class Refrigerator
     @inside = []
   end
 
-  def open_put_close
+  def use
     self.open!
     yield self
     self.close!

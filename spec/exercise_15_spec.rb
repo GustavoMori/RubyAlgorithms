@@ -87,4 +87,13 @@ describe Refrigerator do
       expect(geladeira.withdraw!("chocolate")).to eq("chocolate")
     end
   end
+
+  describe '#use' do
+    it 'execute a block between open/close the refrigerator' do
+      geladeira = Refrigerator.new
+      geladeira.use { |n| n.put_inside!("chocolate") }
+      geladeira.open!
+      expect(geladeira.see_inside!).to eq(["chocolate"])
+    end
+  end
 end

@@ -18,7 +18,6 @@
 
 
 class Refrigerator
-  attr_reader :opened
   
   class MustBeOpenedError < StandardError;end
 
@@ -31,6 +30,10 @@ class Refrigerator
   def initialize (opened = false)
     @opened = opened
     @inside = []
+  end
+
+  def opened? 
+    @opened
   end
 
   def use
@@ -61,6 +64,7 @@ class Refrigerator
 
   def put_inside! str # exclamação por causa que muda um estado do objeto
     @opened ? @inside.push(str.to_s) : (raise MustBeOpenedError)
+    true
   end
 
   def withdraw! str

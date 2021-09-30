@@ -6,8 +6,8 @@ describe '#lazy' do
   end
 
   it 'execute the block two times' do
-    xablau = 0
-    lazy { xablau += 1 }
-    expect(xablau).to eql(2)
+    many_times_block_executed = 0
+    lazy { many_times_block_executed += 1 }
+    expect(many_times_block_executed).to eq(2)
   end
 end

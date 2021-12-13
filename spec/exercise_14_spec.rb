@@ -26,7 +26,7 @@ describe Dessert do
   end
 
   context 'When use methods to check if is healthy or delicious' do
-    
+
     it 'return true if calories < 200' do
       expect(dessert).not_to be_healthy
     end
@@ -43,7 +43,7 @@ describe Dessert do
 end
 
 describe JellyBean do
-  
+
   let(:jelly_bean) { JellyBean.new('Jelly Belly', 105, 'black licorice') }
 
   context 'When use getter and setters of attributes' do
@@ -77,7 +77,7 @@ describe JellyBean do
   end
 
   context 'When use methods to check if is healthy or delicious' do
-    
+
     it 'return true if calories < 200' do
       expect(jelly_bean).to be_healthy
     end

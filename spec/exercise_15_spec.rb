@@ -1,6 +1,6 @@
 require_relative '../exercises/exercise_15'
 
-describe Refrigerator do 
+describe Refrigerator do
   describe '#opened' do
     context 'When do not pass a argument' do
       it 'return by default false' do
@@ -114,7 +114,7 @@ describe Refrigerator do
   describe '#use' do
     it 'execute a block between open/close the refrigerator' do
       geladeira = Refrigerator.new
-      
+
       geladeira.use { |n| n.put_inside!("chocolate") }
 
       geladeira.open!

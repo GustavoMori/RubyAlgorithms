@@ -2,7 +2,7 @@ require_relative '../exercises/exercise_19'
 
 describe '#rps_game_winner' do
 
-  context 'Raise Error when number of players != 2 or when strategy isnt R P S' do
+  context 'when number of players != 2 or strategy isnt R, P, S Raise Error' do
     it 'raise WrongNumberOfPlayersError' do
       player1_and_strategy = ['OKAZINHO', 'R']
 
@@ -18,7 +18,7 @@ describe '#rps_game_winner' do
     end
   end
 
-  context 'first player is the winner' do
+  context 'when first player is the winner' do
     it 'first player choose Rock and second player Scissors' do
       player1_and_strategy = ['OKAZINHO', 'R']
       player2_and_strategy = ['IhaziNho', 'S']
@@ -44,7 +44,7 @@ describe '#rps_game_winner' do
     end
   end
 
-  context 'second player is the winner' do
+  context 'when second player is the winner' do
     it 'first player choose Scissors and second player Rock' do
       player1_and_strategy = ['OKAZINHO', 'S']
       player2_and_strategy = ['IhaziNho', 'R']
@@ -67,6 +67,16 @@ describe '#rps_game_winner' do
       game = [player1_and_strategy, player2_and_strategy]
 
       expect(rps_game_winner(game)).to eq(['IHAZINHO', 'P'])
+    end
+  end
+
+  context 'when first player and second player choose same strategy' do
+    it 'return first player as winner' do
+      player1_and_strategy = ['OKAZINHO', 'R']
+      player2_and_strategy = ['IhaziNho', 'R']
+      game = [player1_and_strategy, player2_and_strategy]
+
+      expect(rps_game_winner(game)).to eq(['OKAZINHO', 'R'])
     end
   end
 end

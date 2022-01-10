@@ -6,7 +6,7 @@ POSSIBILITIES_OF_STRATEGIES = ['R', 'S', 'P']
 
 def rps_game_winner(game)
 
-  game = game.map { |plays| plays.map { |players_and_strategies| players_and_strategies.upcase } }
+  game = game.map { |plays| [plays.first, plays[1].upcase] }
 
   raise WrongNumberOfPlayersError unless game.length == 2
 

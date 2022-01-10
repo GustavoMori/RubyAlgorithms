@@ -50,7 +50,7 @@ describe '#rps_game_winner' do
       player2_and_strategy = ['IhaziNho', 'R']
       game = [player1_and_strategy, player2_and_strategy]
 
-      expect(rps_game_winner(game)).to eq(['IHAZINHO', 'R'])
+      expect(rps_game_winner(game)).to eq(['IhaziNho', 'R'])
     end
 
     it 'first player choose Paper and second player Scissors' do
@@ -58,7 +58,7 @@ describe '#rps_game_winner' do
       player2_and_strategy = ['IhaziNho', 'S']
       game = [player1_and_strategy, player2_and_strategy]
 
-      expect(rps_game_winner(game)).to eq(['IHAZINHO', 'S'])
+      expect(rps_game_winner(game)).to eq(['IhaziNho', 'S'])
     end
 
     it 'first player choose Rock and second player Paper' do
@@ -66,17 +66,17 @@ describe '#rps_game_winner' do
       player2_and_strategy = ['IhaziNho', 'P']
       game = [player1_and_strategy, player2_and_strategy]
 
-      expect(rps_game_winner(game)).to eq(['IHAZINHO', 'P'])
+      expect(rps_game_winner(game)).to eq(['IhaziNho', 'P'])
     end
   end
 
   context 'when first player and second player choose same strategy' do
     it 'return first player as winner' do
-      player1_and_strategy = ['OKAZINHO', 'R']
+      player1_and_strategy = ['okazinho', 'R']
       player2_and_strategy = ['IhaziNho', 'R']
       game = [player1_and_strategy, player2_and_strategy]
 
-      expect(rps_game_winner(game)).to eq(['OKAZINHO', 'R'])
+      expect(rps_game_winner(game)).to eq(['okazinho', 'R'])
     end
   end
 end
